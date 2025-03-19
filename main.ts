@@ -4,8 +4,6 @@ function swap (num: number, num2: number) {
     list[num2] = temp
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    let index2 = 0
-    let index = 0
     boolean = compare(list[index], list[index2]) == true
     bubbleSort()
     mySprite.sayText(list)
@@ -18,13 +16,17 @@ function bubbleSort () {
         for (let index2 = 0; index2 <= index; index2++) {
             if (compare(list[index], list[index2]) == true) {
                 swap(index, index2)
+            } else {
+            	
             }
         }
     }
-    while (false) {
+    while (boolean == (compare(list[index], list[index2]) == true)) {
     	
     }
 }
+let index2 = 0
+let index = 0
 let boolean = false
 let temp = 0
 let mySprite: Sprite = null
